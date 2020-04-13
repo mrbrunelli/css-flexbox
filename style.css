@@ -1,0 +1,49 @@
+/* 
+    - flex-direction: row é usado por padrão no display: flex
+    - flex-direction: column faz com que o elemento se torne uma coluna
+*/
+
+section.flex {
+    display: flex;
+    justify-content: space-around;
+    height: 500px;
+}
+
+section.flex>div {
+    align-self: center;
+    min-width: 200px;
+    min-height: 200px;
+    border: 1px solid #ccc;
+    margin: 10px;
+}
+
+/* - Esticar o primeiro elemento  */
+
+section.flex>*:first-child {
+    align-self: stretch;
+}
+
+/* - Alinhar quarto elemento ao final da div  */
+
+section.flex>div:nth-child(4) {
+    align-self: flex-end;
+}
+
+/* 
+    EXEMPLOS PARA USAR O CHILD
+
+    - Posso usar div:first-child para selecionar o primeiro elemento
+    - div:nth-child(n+2) faz com que a formatação pegue a partir do segundo elemento
+    - div:nth-child(4) a formatação pega apenas no quarto item
+    - div:nth-child(1n+3) formata o primeiro elemento e o elemento a partir do terceiro
+    - div:nth-child(0n+3) mesma coisa de se utilizar (n+3)
+*/
+
+section.flex>div:nth-child(n+3) {
+    display: flex;
+    justify-content: center;
+    /* 
+        OU
+       - text-align: center
+     */
+}
