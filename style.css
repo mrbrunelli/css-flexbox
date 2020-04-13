@@ -47,3 +47,15 @@ section.flex>div:nth-child(n+3) {
        - text-align: center
      */
 }
+
+/* 
+    MEDIA QUERIES
+
+    - Se a resolução atingir esse breakpoint, a section quebrará automaticamente, alinhando da melhor forma os elementos em tela
+*/
+
+@media (max-width: 800px) {
+    section.flex {
+        flex-wrap: wrap;
+    }
+}
